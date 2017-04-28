@@ -1,0 +1,39 @@
+# +------------------------- setup the my personal env ------------------------+
+# |                                nano_v3_env                                 |
+# +----------------------------------------------------------------------------+
+
+# set avr home
+export MIBLOS_HOME=${HOME}/miblos
+
+# extend PATH
+export PATH=${MIBLOS_HOME}/bin::$PATH
+
+# common controller defines
+export MCU=atmega328p
+export F_CPU=16000000
+export BAUD=9600
+
+#
+# my programmer -> Olimex AVR-ISP-MK2
+#
+export PROGRAMMER=avrdude
+export PROGRAMMER_HW=avrispmkii
+export PROGRAMMER_ARGS=" -P usb"
+
+#
+# export project specific definitions
+#
+export PROJECT_CONTROLLER="${MIBLOS_HOME}/include/defines_m328.mk"
+#echo $PROJECT_CONTROLLER
+
+#
+# want to use SERIAL?
+#
+export USE_SERIAL=__YES__
+
+#
+# use __SERIAL__
+#
+export COMMUNICATION_PATH=__SERIAL__
+
+echo "Setup env for target ${MCU} with ${F_CPU}Hz and ${BAUD}baud"

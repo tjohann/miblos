@@ -1,0 +1,19 @@
+#
+# some info about the Arduino Nano V3
+#
+
+# https://www.christians-shop.de/Nano-V3-Entwicklerboard-fuer-Arduino-IDE-ATMEL-ATmega328P-AVR-Mikrocontroller-CH340-Chip-Christians-Technikshop
+
+Power comes over usb connector ...
+
+Microcontroller				ATmega328
+Operating Voltage (logic level) 	5 V
+Input Voltage (recommended) 		7-12 V
+Input Voltage (limits) 			6-20 V
+Digital I/O Pins 			14 (of which 6 provide PWM output)
+Analog Input Pins 			8
+DC Current per I/O Pin 			40 mA
+Flash Memory 	   			32 KB (ATmega328) of which 2 KB used by bootloader
+SRAM 				  	2 KB (ATmega328)
+EEPROM 					1 KB (ATmega328)
+Clock Speed 				16 MHz
