@@ -1,6 +1,6 @@
 /*
   GPL
-  (c) 2014-2017, thorsten.johannvorderbrueggen@t-online.de
+  (c) 2014-2019, thorsten.johannvorderbrueggen@t-online.de
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 */
 
 #include "libhelper.h"
+
 
 void
 helper_convert_ushort_to_string(unsigned char data_string[],

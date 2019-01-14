@@ -1,13 +1,11 @@
-# TODO
+#
+# TODO with date and progress
+#
+#
 
-2014-08-05 -> all
-              make shure, that every lib is build with my 2 example controllers
 
-2014-07-29 -> libavrcyclon
-	      rework for port handling needed -> similiar to lcd_port
-
-2014-07-29 -> libavrcyclon
-	      use 74hc595 ... see http://www.mikrocontroller.net/articles/AVR-Tutorial:_Schieberegister
-
-2014-07-02 -> libavrserial
-	      check and implement operation mode for SYNC_MASTER, SYNC_SLAVE and MASTER_SPI
+#
+# -------------- 2019-01-14 ----------------------------------------------------
+#
+## all
+- add simple example -> blink LED

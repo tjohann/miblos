@@ -1,5 +1,0 @@
-#
-# some starting points
-#
-
-https://www.myembedded.de/2016/08/17/scheduler-mit-erweiterung-zum-mini-betriebssystem/

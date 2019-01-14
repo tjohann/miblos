@@ -2,8 +2,12 @@
 # makefile for libavrserial
 #
 
-include $(MIBLOS_HOME)/include/defines.mk
-include $(MIBLOS_HOME)/include/defines_compile_macros.mk
+ifeq "${MIBLOS_HOME}" ""
+    $(error error: please source a *_env file first!)
+endif
+
+include $(MIBLOS_HOME)/mk/defines.mk
+include $(MIBLOS_HOME)/mk/defines_compile_macros.mk
 include $(PROJECT_CONTROLLER)
 
 TARGET = libserial

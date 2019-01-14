@@ -3,7 +3,7 @@
 # +----------------------------------------------------------------------------+
 
 # set avr home
-export MIBLOS_HOME=${HOME}/miblos
+export MIBLOS_HOME=${HOME}/Programming/miblos
 
 # extend PATH
 export PATH=${MIBLOS_HOME}/bin::$PATH
@@ -23,7 +23,7 @@ export PROGRAMMER_ARGS=" -P usb"
 #
 # export project specific definitions
 #
-export PROJECT_CONTROLLER="${MIBLOS_HOME}/include/defines_m328.mk"
+export PROJECT_CONTROLLER="${MIBLOS_HOME}/mk/defines_m328.mk"
 #echo $PROJECT_CONTROLLER
 
 #

@@ -33,3 +33,6 @@
 *.lst
 *.s
 *.map
+
+# others
+*~
