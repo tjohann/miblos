@@ -1,6 +1,6 @@
 /*
   GPL
-  (c) 2014-2019, thorsten.johannvorderbrueggen@t-online.de
+  (c) 2019, thorsten.johannvorderbrueggen@t-online.de
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -17,58 +17,35 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
 */
 
-#ifndef _AVR_COMPILE_MACROS_H_
-#define _AVR_COMPILE_MACROS_H_
+#include <avr/io.h>
+
+#define __DELAY_BACKWARD_COMPATIBLE__
+#include <util/delay.h>
+#include <string.h>
 
 /*
- * first check the essential macros/defines
+ * -> my avr_sdk libs
  */
-#ifndef F_CPU
-#  error "Freq of CPU not defined!"
-#endif
+#include <avr_compile_macros.h>
+#include <libhelper.h>
+#include <libserial.h>
 
-/*
- * define YES and NO
- */
-#ifndef __YES__
-#define __YES__ 1
-#endif
 
-#ifndef __NO__
-#define __NO__ 0
+// make shure that COMMUNICATION_PATH is available
+#ifndef COMMUNICATION_PATH
+#error "COMMUNICATION_PATH not defined"
 #endif
 
 /*
- * defines for port definitions
+ * -> use serial_errno
  */
-#ifndef __PORT_A__
-#define __PORT_A__ 1
-#endif
-
-#ifndef __PORT_B__
-#define __PORT_B__ 2
-#endif
-
-#ifndef __PORT_C__
-#define __PORT_C__ 3
-#endif
-
-#ifndef __PORT_D__
-#define __PORT_D__ 4
-#endif
+extern unsigned char serial_errno;
 
 /*
- * define NONE
+ * special pins for blinking ...
  */
-#ifndef __NONE__
-#define __NONE__ 0
-#endif
+#define LED_PIN PB0
+#define LED_DDR DDRB
+#define LED_PORT PORTB
 
-/*
- * defines for COMMUNICATION_PATH
- */
-#ifndef __SERIAL__
-#define __SERIAL__ 1
-#endif
 
-#endif
