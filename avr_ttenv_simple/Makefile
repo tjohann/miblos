@@ -1,5 +1,5 @@
 #
-# avr_simple_os makefile
+# avr_ttenv_simple makefile
 #
 
 ifeq "${MIBLOS_HOME}" ""
@@ -11,10 +11,10 @@ include $(MIBLOS_HOME)/mk/defines_compile_macros.mk
 include $(PROJECT_CONTROLLER)
 
 
-TARGET = avr_simple_os
+TARGET = avr_ttenv_simple
 USED_LIBS = helper -lserial
-SRC = avr_simple_os.c
-HEADER = avr_simple_os.h
+SRC = avr_ttenv_simple.c
+HEADER = avr_ttenv_simple.h
 
 
 #

@@ -8,7 +8,7 @@ endif
 
 #include include/defines.mk
 
-MODULES = src avr_simple_os
+MODULES = src avr_ttenv_simple avr_blink_led
 MODULES_ADDITIONAL = include bin lib mk pics Documentation schematics
 
 all::

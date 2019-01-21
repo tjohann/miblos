@@ -44,7 +44,7 @@ extern unsigned char serial_errno;
 /*
  * special pins for blinking ...
  */
-#define LED_PIN PB0
+#define LED_PIN PB5
 #define LED_DDR DDRB
 #define LED_PORT PORTB
 

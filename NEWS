@@ -3,6 +3,11 @@
 #
 
 
+2019-01-21 -> ## all
+	      add avr_simple_ttenv -> simplest verion of an time-triggert-env
+	      add avr_blink_led -> let a LED blink as a starting point
+	      add some links and infos about the nano-v3
+
 2019-01-13 -> ## all
 	      some basic updates and basic preps
 

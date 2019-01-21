@@ -17,7 +17,7 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
 */
 
-#include "avr_simple_os.h"
+#include "avr_blink_led.h"
 
 /*
  * common defines
@@ -44,14 +44,14 @@
 #define STATE_INIT_DONE 0x40
 
 // my common state info
-unsigned char state_of_template = STATE_UNKNOWN;
+unsigned char state_of_blink_led = STATE_UNKNOWN;
 
 
 /*
  * -> init hw
  */
 void
-__attribute__((noinline)) init_avr_simple_os(void)
+__attribute__((noinline)) init_avr_blink_led(void)
 {
 	// set ddr for led pin
 	SET_BIT(LED_DDR, LED_PIN);
@@ -65,7 +65,7 @@ void
 error_indication(const unsigned char *error_string)
 {
 #if COMMUNICATION_PATH == __SERIAL__
-	if (state_of_template & STATE_SERIAL_INIT_DONE) {
+	if (state_of_blink_led & STATE_SERIAL_INIT_DONE) {
 		if (error_string != NULL)
 			serial_send_string(error_string);
 		else
@@ -110,7 +110,7 @@ __attribute__((OS_main)) main(void)
 		error_indication(error_string);
 
 	// init serial done ... send greetings to peer
-	state_of_template |= STATE_SERIAL_INIT_DONE;
+	state_of_blink_led |= STATE_SERIAL_INIT_DONE;
 	serial_send_string(greeting_string);
 
 	// get an char from peer and send it as ascii
@@ -124,7 +124,7 @@ __attribute__((OS_main)) main(void)
 	 * ---------- init template stuff ----------
 	 */
 	// infrastructure is ready to use ... so my init is the next step
-	init_avr_simple_os();
+	init_avr_blink_led();
 
         /*
 	 * ---------- main stuff below ----------

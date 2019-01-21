@@ -4,7 +4,9 @@
 
 # https://www.christians-shop.de/Nano-V3-Entwicklerboard-fuer-Arduino-IDE-ATMEL-ATmega328P-AVR-Mikrocontroller-CH340-Chip-Christians-Technikshop
 
-Power comes over usb connector ...
+https://www.microchip.com/wwwproducts/en/ATmega328
+
+Power comes over usb connector or 5V Pin ...
 
 Microcontroller				ATmega328
 Operating Voltage (logic level) 	5 V
@@ -17,3 +19,7 @@ Flash Memory 	   			32 KB (ATmega328) of which 2 KB used by bootloader
 SRAM 				  	2 KB (ATmega328)
 EEPROM 					1 KB (ATmega328)
 Clock Speed 				16 MHz
+
+serial 					0 (RX) and 1 (TX) -> FTDI USB converter
+I2C    					A4 (SDA) and A5 (SCL)
+LED    					D13 -> digital pin 13 (PB5)
